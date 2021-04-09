@@ -1,0 +1,17 @@
+{
+  "name": "basic-example",
+  "version": "1.0.0",
+  "description": "This example demonstrates a call to a greeting smart contract on the Ropsten network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "supply": "tsc && node dist/supplyToCompound.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^5.1.0",
+    "fireblocks-defi-sdk": "^1.0.2",
+    "fireblocks-sdk": "^1.5.11"
+  }
+}
