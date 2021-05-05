@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "supply": "tsc && node dist/supplyToCompound.js"
+    "supply": "tsc && node dist/supplyToCompound.js",
+    "redeem": "tsc && node dist/redeemFromCompound.js",
+    "exchange": "tsc && node dist/exchangeRate.js"
   },
   "author": "",
   "license": "ISC",
