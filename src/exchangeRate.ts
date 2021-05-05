@@ -3,6 +3,7 @@ import { EthersBridge, Chain } from 'fireblocks-defi-sdk';
 import { ethers, PopulatedTransaction, PayableOverrides, utils } from 'ethers';
 import * as fs from 'fs';
 import path from 'path';
+
 const CHAIN = Chain.ROPSTEN;
 // Ropsten Contract for cETH
 const CONTRACT_ADDRESS = '0x42a628e0c5F3767930097B34b08dCF77e78e4F2B';
@@ -1314,10 +1315,7 @@ const CONTRACT_ABI = [
 ];
 const provider = ethers.getDefaultProvider(CHAIN);
 
-async function supplyToCompound(
-  bridge: EthersBridge,
-  tx: PopulatedTransaction
-) {
+async function exchangeRate(bridge: EthersBridge, tx: PopulatedTransaction) {
   const res = await bridge.sendTransaction(tx).catch((err) => {
     console.log('sendTransaction failed.', err);
   });
@@ -1332,8 +1330,8 @@ async function supplyToCompound(
     console.log('waitForTxHash failed.', err);
   });
 
-  console.log('result:', res);
   console.log('txHash:', txHash);
+  console.log('response:', res);
 }
 
 (async function () {
@@ -1356,12 +1354,8 @@ async function supplyToCompound(
     ethers.getDefaultProvider(CHAIN)
   );
 
-  const params: PayableOverrides = {
-    value: utils.parseEther('0.5'),
-  };
-
-  const tx = await contract.populateTransaction.mint(params);
-  await supplyToCompound(bridge, tx);
+  let exchangeRateCurrent = await contract.populateTransaction.exchangeRateCurrent();
+  await exchangeRate(bridge, exchangeRateCurrent);
 })().catch((err) => {
   console.log('error', err);
   process.exit(1);

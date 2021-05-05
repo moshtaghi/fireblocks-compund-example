@@ -1314,7 +1314,7 @@ const CONTRACT_ABI = [
 ];
 const provider = ethers.getDefaultProvider(CHAIN);
 
-async function supplyToCompound(
+async function redeemFromCompound(
   bridge: EthersBridge,
   tx: PopulatedTransaction
 ) {
@@ -1332,12 +1332,10 @@ async function supplyToCompound(
     console.log('waitForTxHash failed.', err);
   });
 
-  console.log('result:', res);
-  console.log('txHash:', txHash);
+  console.log(`Transaction ${res.id} has been broadcast. TX Hash is ${txHash}`);
 }
-
 (async function () {
-  const apiKey = 'XXXYYYZZZ';
+  const apiKey = 'd0ff995c-f05e-5408-9de4-109a43fa2cb4';
   const apiSecret = fs.readFileSync(
     path.resolve(__dirname, '../fireblocks.key'),
     'utf8'
@@ -1357,11 +1355,14 @@ async function supplyToCompound(
   );
 
   const params: PayableOverrides = {
-    value: utils.parseEther('0.5'),
+    value: utils.parseEther('1.0'),
   };
 
-  const tx = await contract.populateTransaction.mint(params);
-  await supplyToCompound(bridge, tx);
+  const tx: PopulatedTransaction = await contract.populateTransaction.redeem(
+    146 * 1e8
+  );
+  console.log(tx);
+  await redeemFromCompound(bridge, tx);
 })().catch((err) => {
   console.log('error', err);
   process.exit(1);
