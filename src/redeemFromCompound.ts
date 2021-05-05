@@ -1332,10 +1332,11 @@ async function redeemFromCompound(
     console.log('waitForTxHash failed.', err);
   });
 
-  console.log(`Transaction ${res.id} has been broadcast. TX Hash is ${txHash}`);
+  console.log('result:', res);
+  console.log('txHash:', txHash);
 }
 (async function () {
-  const apiKey = 'd0ff995c-f05e-5408-9de4-109a43fa2cb4';
+  const apiKey = 'XXXYYYZZZ';
   const apiSecret = fs.readFileSync(
     path.resolve(__dirname, '../fireblocks.key'),
     'utf8'
@@ -1354,14 +1355,9 @@ async function redeemFromCompound(
     ethers.getDefaultProvider(CHAIN)
   );
 
-  const params: PayableOverrides = {
-    value: utils.parseEther('1.0'),
-  };
-
   const tx: PopulatedTransaction = await contract.populateTransaction.redeem(
-    146 * 1e8
+    100 * 1e8
   );
-  console.log(tx);
   await redeemFromCompound(bridge, tx);
 })().catch((err) => {
   console.log('error', err);
