@@ -3,10 +3,9 @@ import { EthersBridge, Chain } from 'fireblocks-defi-sdk';
 import { ethers, PopulatedTransaction, PayableOverrides, utils } from 'ethers';
 import * as fs from 'fs';
 import path from 'path';
-
 const CHAIN = Chain.ROPSTEN;
 // Ropsten Contract for cETH
-const CONTRACT_ADDRESS = '0x859e9d8a4edadfedb5a2ff311243af80f85a91b8';
+const CONTRACT_ADDRESS = '0x42a628e0c5F3767930097B34b08dCF77e78e4F2B';
 const CONTRACT_ABI = [
   {
     inputs: [
@@ -1333,11 +1332,12 @@ async function supplyToCompound(
     console.log('waitForTxHash failed.', err);
   });
 
-  console.log(`Transaction ${res.id} has been broadcast. TX Hash is ${txHash}`);
+  console.log('result:', res);
+  console.log('txHash:', txHash);
 }
 
 (async function () {
-  const apiKey = 'aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee';
+  const apiKey = 'd0ff995c-f05e-5408-9de4-109a43fa2cb4';
   const apiSecret = fs.readFileSync(
     path.resolve(__dirname, '../fireblocks.key'),
     'utf8'
@@ -1346,7 +1346,7 @@ async function supplyToCompound(
 
   const bridge = new EthersBridge({
     fireblocksApiClient,
-    vaultAccountId: '0',
+    vaultAccountId: '29',
     chain: CHAIN,
   });
 
@@ -1357,12 +1357,10 @@ async function supplyToCompound(
   );
 
   const params: PayableOverrides = {
-    value: utils.parseEther('1.0'),
+    value: utils.parseEther('0.5'),
   };
 
-  const tx: PopulatedTransaction = await contract.populateTransaction.mint(
-    params
-  );
+  const tx = await contract.populateTransaction.mint(params);
   await supplyToCompound(bridge, tx);
 })().catch((err) => {
   console.log('error', err);
