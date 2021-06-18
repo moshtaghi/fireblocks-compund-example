@@ -3,17 +3,11 @@
 ## First of all
 
 1- Run `npm install` once.
-2- Put your FireBlocks apiKey in code (all files in src directory)
+
+2- Change your FireBlocks apiKey in `src/assets/fireblocks.ts` line `8`
+
 3- Put your API SECRET KEY file in the root as fireblocks.key
 
-## For Supply To Compound
+4- Run `tsc` command
 
-Run `npm run supply`
-
-## For Redeem From Compound
-
-Run `npm run supply`
-
-## For Show Exchange Rate (It will failure)
-
-Run `npm run supply`
+5- Run scripts from `dist` directory using `node dist/FILE_NAME.js`
