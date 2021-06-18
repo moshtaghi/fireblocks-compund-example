@@ -2,13 +2,15 @@ import { PayableOverrides, utils } from 'ethers';
 import { cETHcontract } from './assets/contracts';
 import { SendToFireBlocks } from './assets/fireblocks';
 (async function () {
-  if (process.argv.length < 3) {
-    console.error('Usage: node dist/supplyToCompound.js <vaultID>');
+  if (process.argv.length < 4) {
+    console.error(
+      'Usage: node dist/supplyToCompound.js <YOUR VAULT ID> <ETH QTY>'
+    );
     process.exit(1);
   }
-  console.log('Suppling 1ETH to Compound');
+  console.log('Suppling ETH to Compound');
   const params: PayableOverrides = {
-    value: utils.parseEther('1'),
+    value: utils.parseEther(process.argv[3]),
   };
   const tx = await cETHcontract.populateTransaction.mint(params);
   await SendToFireBlocks(process.argv[2], tx);
