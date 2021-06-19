@@ -8553,63 +8553,27 @@ export default {
           name: 'priceData_',
           type: 'address',
         },
-        {
-          internalType: 'address',
-          name: 'reporter_',
-          type: 'address',
-        },
+        { internalType: 'address', name: 'reporter_', type: 'address' },
         {
           internalType: 'uint256',
           name: 'anchorToleranceMantissa_',
           type: 'uint256',
         },
-        {
-          internalType: 'uint256',
-          name: 'anchorPeriod_',
-          type: 'uint256',
-        },
+        { internalType: 'uint256', name: 'anchorPeriod_', type: 'uint256' },
         {
           components: [
-            {
-              internalType: 'address',
-              name: 'cToken',
-              type: 'address',
-            },
-            {
-              internalType: 'address',
-              name: 'underlying',
-              type: 'address',
-            },
-            {
-              internalType: 'bytes32',
-              name: 'symbolHash',
-              type: 'bytes32',
-            },
-            {
-              internalType: 'uint256',
-              name: 'baseUnit',
-              type: 'uint256',
-            },
+            { internalType: 'address', name: 'cToken', type: 'address' },
+            { internalType: 'address', name: 'underlying', type: 'address' },
+            { internalType: 'bytes32', name: 'symbolHash', type: 'bytes32' },
+            { internalType: 'uint256', name: 'baseUnit', type: 'uint256' },
             {
               internalType: 'enum UniswapConfig.PriceSource',
               name: 'priceSource',
               type: 'uint8',
             },
-            {
-              internalType: 'uint256',
-              name: 'fixedPrice',
-              type: 'uint256',
-            },
-            {
-              internalType: 'address',
-              name: 'uniswapMarket',
-              type: 'address',
-            },
-            {
-              internalType: 'bool',
-              name: 'isUniswapReversed',
-              type: 'bool',
-            },
+            { internalType: 'uint256', name: 'fixedPrice', type: 'uint256' },
+            { internalType: 'address', name: 'uniswapMarket', type: 'address' },
+            { internalType: 'bool', name: 'isUniswapReversed', type: 'bool' },
           ],
           internalType: 'struct UniswapConfig.TokenConfig[]',
           name: 'configs',
@@ -8747,94 +8711,42 @@ export default {
     {
       inputs: [],
       name: 'anchorPeriod',
-      outputs: [
-        {
-          internalType: 'uint256',
-          name: '',
-          type: 'uint256',
-        },
-      ],
+      outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
       stateMutability: 'view',
       type: 'function',
     },
     {
       inputs: [],
       name: 'ethBaseUnit',
-      outputs: [
-        {
-          internalType: 'uint256',
-          name: '',
-          type: 'uint256',
-        },
-      ],
+      outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
       stateMutability: 'view',
       type: 'function',
     },
     {
       inputs: [],
       name: 'expScale',
-      outputs: [
-        {
-          internalType: 'uint256',
-          name: '',
-          type: 'uint256',
-        },
-      ],
+      outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
       stateMutability: 'view',
       type: 'function',
     },
     {
-      inputs: [
-        {
-          internalType: 'uint256',
-          name: 'i',
-          type: 'uint256',
-        },
-      ],
+      inputs: [{ internalType: 'uint256', name: 'i', type: 'uint256' }],
       name: 'getTokenConfig',
       outputs: [
         {
           components: [
-            {
-              internalType: 'address',
-              name: 'cToken',
-              type: 'address',
-            },
-            {
-              internalType: 'address',
-              name: 'underlying',
-              type: 'address',
-            },
-            {
-              internalType: 'bytes32',
-              name: 'symbolHash',
-              type: 'bytes32',
-            },
-            {
-              internalType: 'uint256',
-              name: 'baseUnit',
-              type: 'uint256',
-            },
+            { internalType: 'address', name: 'cToken', type: 'address' },
+            { internalType: 'address', name: 'underlying', type: 'address' },
+            { internalType: 'bytes32', name: 'symbolHash', type: 'bytes32' },
+            { internalType: 'uint256', name: 'baseUnit', type: 'uint256' },
             {
               internalType: 'enum UniswapConfig.PriceSource',
               name: 'priceSource',
               type: 'uint8',
             },
-            {
-              internalType: 'uint256',
-              name: 'fixedPrice',
-              type: 'uint256',
-            },
-            {
-              internalType: 'address',
-              name: 'uniswapMarket',
-              type: 'address',
-            },
-            {
-              internalType: 'bool',
-              name: 'isUniswapReversed',
-              type: 'bool',
-            },
+            { internalType: 'uint256', name: 'fixedPrice', type: 'uint256' },
+            { internalType: 'address', name: 'uniswapMarket', type: 'address' },
+            { internalType: 'bool', name: 'isUniswapReversed', type: 'bool' },
           ],
           internalType: 'struct UniswapConfig.TokenConfig',
           name: '',
@@ -8845,57 +8757,23 @@ export default {
       type: 'function',
     },
     {
-      inputs: [
-        {
-          internalType: 'address',
-          name: 'cToken',
-          type: 'address',
-        },
-      ],
+      inputs: [{ internalType: 'address', name: 'cToken', type: 'address' }],
       name: 'getTokenConfigByCToken',
       outputs: [
         {
           components: [
-            {
-              internalType: 'address',
-              name: 'cToken',
-              type: 'address',
-            },
-            {
-              internalType: 'address',
-              name: 'underlying',
-              type: 'address',
-            },
-            {
-              internalType: 'bytes32',
-              name: 'symbolHash',
-              type: 'bytes32',
-            },
-            {
-              internalType: 'uint256',
-              name: 'baseUnit',
-              type: 'uint256',
-            },
+            { internalType: 'address', name: 'cToken', type: 'address' },
+            { internalType: 'address', name: 'underlying', type: 'address' },
+            { internalType: 'bytes32', name: 'symbolHash', type: 'bytes32' },
+            { internalType: 'uint256', name: 'baseUnit', type: 'uint256' },
             {
               internalType: 'enum UniswapConfig.PriceSource',
               name: 'priceSource',
               type: 'uint8',
             },
-            {
-              internalType: 'uint256',
-              name: 'fixedPrice',
-              type: 'uint256',
-            },
-            {
-              internalType: 'address',
-              name: 'uniswapMarket',
-              type: 'address',
-            },
-            {
-              internalType: 'bool',
-              name: 'isUniswapReversed',
-              type: 'bool',
-            },
+            { internalType: 'uint256', name: 'fixedPrice', type: 'uint256' },
+            { internalType: 'address', name: 'uniswapMarket', type: 'address' },
+            { internalType: 'bool', name: 'isUniswapReversed', type: 'bool' },
           ],
           internalType: 'struct UniswapConfig.TokenConfig',
           name: '',
@@ -8906,57 +8784,23 @@ export default {
       type: 'function',
     },
     {
-      inputs: [
-        {
-          internalType: 'string',
-          name: 'symbol',
-          type: 'string',
-        },
-      ],
+      inputs: [{ internalType: 'string', name: 'symbol', type: 'string' }],
       name: 'getTokenConfigBySymbol',
       outputs: [
         {
           components: [
-            {
-              internalType: 'address',
-              name: 'cToken',
-              type: 'address',
-            },
-            {
-              internalType: 'address',
-              name: 'underlying',
-              type: 'address',
-            },
-            {
-              internalType: 'bytes32',
-              name: 'symbolHash',
-              type: 'bytes32',
-            },
-            {
-              internalType: 'uint256',
-              name: 'baseUnit',
-              type: 'uint256',
-            },
+            { internalType: 'address', name: 'cToken', type: 'address' },
+            { internalType: 'address', name: 'underlying', type: 'address' },
+            { internalType: 'bytes32', name: 'symbolHash', type: 'bytes32' },
+            { internalType: 'uint256', name: 'baseUnit', type: 'uint256' },
             {
               internalType: 'enum UniswapConfig.PriceSource',
               name: 'priceSource',
               type: 'uint8',
             },
-            {
-              internalType: 'uint256',
-              name: 'fixedPrice',
-              type: 'uint256',
-            },
-            {
-              internalType: 'address',
-              name: 'uniswapMarket',
-              type: 'address',
-            },
-            {
-              internalType: 'bool',
-              name: 'isUniswapReversed',
-              type: 'bool',
-            },
+            { internalType: 'uint256', name: 'fixedPrice', type: 'uint256' },
+            { internalType: 'address', name: 'uniswapMarket', type: 'address' },
+            { internalType: 'bool', name: 'isUniswapReversed', type: 'bool' },
           ],
           internalType: 'struct UniswapConfig.TokenConfig',
           name: '',
@@ -8968,56 +8812,24 @@ export default {
     },
     {
       inputs: [
-        {
-          internalType: 'bytes32',
-          name: 'symbolHash',
-          type: 'bytes32',
-        },
+        { internalType: 'bytes32', name: 'symbolHash', type: 'bytes32' },
       ],
       name: 'getTokenConfigBySymbolHash',
       outputs: [
         {
           components: [
-            {
-              internalType: 'address',
-              name: 'cToken',
-              type: 'address',
-            },
-            {
-              internalType: 'address',
-              name: 'underlying',
-              type: 'address',
-            },
-            {
-              internalType: 'bytes32',
-              name: 'symbolHash',
-              type: 'bytes32',
-            },
-            {
-              internalType: 'uint256',
-              name: 'baseUnit',
-              type: 'uint256',
-            },
+            { internalType: 'address', name: 'cToken', type: 'address' },
+            { internalType: 'address', name: 'underlying', type: 'address' },
+            { internalType: 'bytes32', name: 'symbolHash', type: 'bytes32' },
+            { internalType: 'uint256', name: 'baseUnit', type: 'uint256' },
             {
               internalType: 'enum UniswapConfig.PriceSource',
               name: 'priceSource',
               type: 'uint8',
             },
-            {
-              internalType: 'uint256',
-              name: 'fixedPrice',
-              type: 'uint256',
-            },
-            {
-              internalType: 'address',
-              name: 'uniswapMarket',
-              type: 'address',
-            },
-            {
-              internalType: 'bool',
-              name: 'isUniswapReversed',
-              type: 'bool',
-            },
+            { internalType: 'uint256', name: 'fixedPrice', type: 'uint256' },
+            { internalType: 'address', name: 'uniswapMarket', type: 'address' },
+            { internalType: 'bool', name: 'isUniswapReversed', type: 'bool' },
           ],
           internalType: 'struct UniswapConfig.TokenConfig',
           name: '',
@@ -9029,56 +8841,24 @@ export default {
     },
     {
       inputs: [
-        {
-          internalType: 'address',
-          name: 'underlying',
-          type: 'address',
-        },
+        { internalType: 'address', name: 'underlying', type: 'address' },
       ],
       name: 'getTokenConfigByUnderlying',
       outputs: [
         {
           components: [
-            {
-              internalType: 'address',
-              name: 'cToken',
-              type: 'address',
-            },
-            {
-              internalType: 'address',
-              name: 'underlying',
-              type: 'address',
-            },
-            {
-              internalType: 'bytes32',
-              name: 'symbolHash',
-              type: 'bytes32',
-            },
-            {
-              internalType: 'uint256',
-              name: 'baseUnit',
-              type: 'uint256',
-            },
+            { internalType: 'address', name: 'cToken', type: 'address' },
+            { internalType: 'address', name: 'underlying', type: 'address' },
+            { internalType: 'bytes32', name: 'symbolHash', type: 'bytes32' },
+            { internalType: 'uint256', name: 'baseUnit', type: 'uint256' },
             {
               internalType: 'enum UniswapConfig.PriceSource',
               name: 'priceSource',
               type: 'uint8',
             },
-            {
-              internalType: 'uint256',
-              name: 'fixedPrice',
-              type: 'uint256',
-            },
-            {
-              internalType: 'address',
-              name: 'uniswapMarket',
-              type: 'address',
-            },
-            {
-              internalType: 'bool',
-              name: 'isUniswapReversed',
-              type: 'bool',
-            },
+            { internalType: 'uint256', name: 'fixedPrice', type: 'uint256' },
+            { internalType: 'address', name: 'uniswapMarket', type: 'address' },
+            { internalType: 'bool', name: 'isUniswapReversed', type: 'bool' },
           ],
           internalType: 'struct UniswapConfig.TokenConfig',
           name: '',
@@ -9089,36 +8869,16 @@ export default {
       type: 'function',
     },
     {
-      inputs: [
-        {
-          internalType: 'address',
-          name: 'cToken',
-          type: 'address',
-        },
-      ],
+      inputs: [{ internalType: 'address', name: 'cToken', type: 'address' }],
       name: 'getUnderlyingPrice',
-      outputs: [
-        {
-          internalType: 'uint256',
-          name: '',
-          type: 'uint256',
-        },
-      ],
+      outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
       stateMutability: 'view',
       type: 'function',
     },
     {
       inputs: [
-        {
-          internalType: 'bytes',
-          name: 'message',
-          type: 'bytes',
-        },
-        {
-          internalType: 'bytes',
-          name: 'signature',
-          type: 'bytes',
-        },
+        { internalType: 'bytes', name: 'message', type: 'bytes' },
+        { internalType: 'bytes', name: 'signature', type: 'bytes' },
       ],
       name: 'invalidateReporter',
       outputs: [],
@@ -9128,49 +8888,23 @@ export default {
     {
       inputs: [],
       name: 'lowerBoundAnchorRatio',
-      outputs: [
-        {
-          internalType: 'uint256',
-          name: '',
-          type: 'uint256',
-        },
-      ],
+      outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
       stateMutability: 'view',
       type: 'function',
     },
     {
       inputs: [],
       name: 'maxTokens',
-      outputs: [
-        {
-          internalType: 'uint256',
-          name: '',
-          type: 'uint256',
-        },
-      ],
+      outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
       stateMutability: 'view',
       type: 'function',
     },
     {
-      inputs: [
-        {
-          internalType: 'bytes32',
-          name: '',
-          type: 'bytes32',
-        },
-      ],
+      inputs: [{ internalType: 'bytes32', name: '', type: 'bytes32' }],
       name: 'newObservations',
       outputs: [
-        {
-          internalType: 'uint256',
-          name: 'timestamp',
-          type: 'uint256',
-        },
-        {
-          internalType: 'uint256',
-          name: 'acc',
-          type: 'uint256',
-        },
+        { internalType: 'uint256', name: 'timestamp', type: 'uint256' },
+        { internalType: 'uint256', name: 'acc', type: 'uint256' },
       ],
       stateMutability: 'view',
       type: 'function',
@@ -9178,57 +8912,25 @@ export default {
     {
       inputs: [],
       name: 'numTokens',
-      outputs: [
-        {
-          internalType: 'uint256',
-          name: '',
-          type: 'uint256',
-        },
-      ],
+      outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
       stateMutability: 'view',
       type: 'function',
     },
     {
-      inputs: [
-        {
-          internalType: 'bytes32',
-          name: '',
-          type: 'bytes32',
-        },
-      ],
+      inputs: [{ internalType: 'bytes32', name: '', type: 'bytes32' }],
       name: 'oldObservations',
       outputs: [
-        {
-          internalType: 'uint256',
-          name: 'timestamp',
-          type: 'uint256',
-        },
-        {
-          internalType: 'uint256',
-          name: 'acc',
-          type: 'uint256',
-        },
+        { internalType: 'uint256', name: 'timestamp', type: 'uint256' },
+        { internalType: 'uint256', name: 'acc', type: 'uint256' },
       ],
       stateMutability: 'view',
       type: 'function',
     },
     {
       inputs: [
-        {
-          internalType: 'bytes[]',
-          name: 'messages',
-          type: 'bytes[]',
-        },
-        {
-          internalType: 'bytes[]',
-          name: 'signatures',
-          type: 'bytes[]',
-        },
-        {
-          internalType: 'string[]',
-          name: 'symbols',
-          type: 'string[]',
-        },
+        { internalType: 'bytes[]', name: 'messages', type: 'bytes[]' },
+        { internalType: 'bytes[]', name: 'signatures', type: 'bytes[]' },
+        { internalType: 'string[]', name: 'symbols', type: 'string[]' },
       ],
       name: 'postPrices',
       outputs: [],
@@ -9236,21 +8938,9 @@ export default {
       type: 'function',
     },
     {
-      inputs: [
-        {
-          internalType: 'string',
-          name: 'symbol',
-          type: 'string',
-        },
-      ],
+      inputs: [{ internalType: 'string', name: 'symbol', type: 'string' }],
       name: 'price',
-      outputs: [
-        {
-          internalType: 'uint256',
-          name: '',
-          type: 'uint256',
-        },
-      ],
+      outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
       stateMutability: 'view',
       type: 'function',
     },
@@ -9268,84 +8958,40 @@ export default {
       type: 'function',
     },
     {
-      inputs: [
-        {
-          internalType: 'bytes32',
-          name: '',
-          type: 'bytes32',
-        },
-      ],
+      inputs: [{ internalType: 'bytes32', name: '', type: 'bytes32' }],
       name: 'prices',
-      outputs: [
-        {
-          internalType: 'uint256',
-          name: '',
-          type: 'uint256',
-        },
-      ],
+      outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
       stateMutability: 'view',
       type: 'function',
     },
     {
       inputs: [],
       name: 'reporter',
-      outputs: [
-        {
-          internalType: 'address',
-          name: '',
-          type: 'address',
-        },
-      ],
+      outputs: [{ internalType: 'address', name: '', type: 'address' }],
       stateMutability: 'view',
       type: 'function',
     },
     {
       inputs: [],
       name: 'reporterInvalidated',
-      outputs: [
-        {
-          internalType: 'bool',
-          name: '',
-          type: 'bool',
-        },
-      ],
+      outputs: [{ internalType: 'bool', name: '', type: 'bool' }],
       stateMutability: 'view',
       type: 'function',
     },
     {
       inputs: [
-        {
-          internalType: 'bytes',
-          name: 'message',
-          type: 'bytes',
-        },
-        {
-          internalType: 'bytes',
-          name: 'signature',
-          type: 'bytes',
-        },
+        { internalType: 'bytes', name: 'message', type: 'bytes' },
+        { internalType: 'bytes', name: 'signature', type: 'bytes' },
       ],
       name: 'source',
-      outputs: [
-        {
-          internalType: 'address',
-          name: '',
-          type: 'address',
-        },
-      ],
+      outputs: [{ internalType: 'address', name: '', type: 'address' }],
       stateMutability: 'pure',
       type: 'function',
     },
     {
       inputs: [],
       name: 'upperBoundAnchorRatio',
-      outputs: [
-        {
-          internalType: 'uint256',
-          name: '',
-          type: 'uint256',
-        },
-      ],
+      outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
       stateMutability: 'view',
       type: 'function',
     },
