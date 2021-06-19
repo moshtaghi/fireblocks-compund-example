@@ -14,7 +14,7 @@ import { SendToFireBlocks } from './assets/fireblocks';
   );
   console.log('Redeeming from compound...');
   const tx: PopulatedTransaction =
-    await cETHcontract.populateTransaction.redeemUnderlying(cTokenBalance);
+    await cETHcontract.populateTransaction.redeem(cTokenBalance);
   await SendToFireBlocks(process.argv[2], tx);
 })().catch((err) => {
   console.log('error', err);
