@@ -1,4 +1,4 @@
-import contractAddress from './assets/contractAddress';
+import contractAddress from './assets/ropstenContractAddress';
 import {
   comptrollerContract,
   priceContract,

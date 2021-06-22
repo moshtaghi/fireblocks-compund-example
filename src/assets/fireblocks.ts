@@ -17,7 +17,7 @@ export const Bridge = (fireblocksApiClient, vaultAccountId: string) => {
   return new EthersBridge({
     fireblocksApiClient,
     vaultAccountId: vaultAccountId,
-    chain: Chain.KOVAN,
+    chain: Chain.ROPSTEN,
   });
 };
 

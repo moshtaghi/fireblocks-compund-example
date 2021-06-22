@@ -1,5 +1,5 @@
 import { cUSDTcontract, USDTcontract } from './assets/contracts';
-import contractAddress from './assets/contractAddress';
+import contractAddress from './assets/ropstenContractAddress';
 import { SendToFireBlocks } from './assets/fireblocks';
 
 (async function () {
