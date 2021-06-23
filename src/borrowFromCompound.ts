@@ -9,7 +9,7 @@ import { SendToFireBlocks } from './assets/fireblocks';
 (async function () {
   if (process.argv.length < 4) {
     console.error(
-      'Usage: node dist/borrowFromCompound.js <YOUR VAULT ID> <YUR KOVAN ETH ADDRESS>'
+      'Usage: node dist/borrowFromCompound.js <YOUR VAULT ID> <YUR ETH ADDRESS>'
     );
     process.exit(1);
   }
@@ -54,7 +54,7 @@ import { SendToFireBlocks } from './assets/fireblocks';
     `\nYour borrowed amount INCREASES (${borrowRate} * borrowed amount) ${assetName} per block.\nThis is based on the current borrow rate.\n`
   );
 
-  const underlyingToBorrow = 50;
+  const underlyingToBorrow = 100;
   console.log(`Now attempting to borrow ${underlyingToBorrow} ${assetName}...`);
   const scaledUpBorrowAmount = (
     underlyingToBorrow * Math.pow(10, underlyingDecimals)

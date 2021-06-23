@@ -5,7 +5,7 @@ import { SendToFireBlocks } from './assets/fireblocks';
 (async function () {
   if (process.argv.length < 4) {
     console.error(
-      'Usage: node dist/redeemFromCompound.js <YOUR VAULT ID> <YUR KOVAN ETH ADDRESS>'
+      'Usage: node dist/redeemFromCompound.js <YOUR VAULT ID> <YUR ETH ADDRESS>'
     );
     process.exit(1);
   }

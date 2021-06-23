@@ -1,10 +1,9 @@
-import { BigNumber } from 'ethers';
 import { cETHcontract } from './assets/contracts';
 (async function () {
   const ethDecimals = 18;
 
   if (process.argv.length < 3) {
-    console.error('Usage: node dist/redeemedStatus.js <YUR KOVAN ETH ADDRESS>');
+    console.error('Usage: node dist/redeemedStatus.js <YUR ETH ADDRESS>');
     process.exit(1);
   }
   console.log('getting exchangeRate and Balance of cETH...');

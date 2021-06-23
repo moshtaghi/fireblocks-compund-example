@@ -1,7 +1,7 @@
 import { cETHcontract, cUSDTcontract } from './assets/contracts';
 (async function () {
   if (process.argv.length < 3) {
-    console.error('Usage: node dist/borrowBalance.js <YUR KOVAN ETH ADDRESS>');
+    console.error('Usage: node dist/borrowBalance.js <YUR ETH ADDRESS>');
     process.exit(1);
   }
   let cETH = await cETHcontract.callStatic.borrowBalanceCurrent(

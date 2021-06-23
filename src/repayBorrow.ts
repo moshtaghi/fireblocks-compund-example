@@ -5,10 +5,11 @@ import { SendToFireBlocks } from './assets/fireblocks';
 (async function () {
   if (process.argv.length < 4) {
     console.error(
-      'Usage: node dist/repayBorrow.js <YOUR VAULT ID> <YUR KOVAN ETH ADDRESS>'
+      'Usage: node dist/repayBorrow.js <YOUR VAULT ID> <YUR ETH ADDRESS>'
     );
     process.exit(1);
   }
+  const underlyingDecimals = 8;
   console.log('getting borrowed balance...');
   let cUSDT = await cUSDTcontract.callStatic.borrowBalanceCurrent(
     process.argv[3]
@@ -16,7 +17,7 @@ import { SendToFireBlocks } from './assets/fireblocks';
   console.log(`you borrowed ${cUSDT / 1e6} USDT`);
   console.log('repaying the borrow...');
   console.log('approving...');
-  const underlyingToRepay = ((cUSDT / 1e6) * Math.pow(10, 6)).toString();
+  const underlyingToRepay = (100 * Math.pow(10, underlyingDecimals)).toString();
   const approveTx = await USDTcontract.populateTransaction.approve(
     contractAddress.Contracts.cUSDT,
     underlyingToRepay
